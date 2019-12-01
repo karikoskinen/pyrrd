@@ -29,7 +29,7 @@ class ExternalBackendTestCase(TestCase):
                     "step)")
         try:
             self.rrd.update()
-        except ExternalCommandError, error:
+        except ExternalCommandError as error:
             self.assertTrue(str(error).startswith("ERROR:"))
             self.assertTrue(str(error).endswith(expected))
 

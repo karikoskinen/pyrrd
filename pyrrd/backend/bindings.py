@@ -157,8 +157,8 @@ def _cmd(command, args, debug=False):
     # right now)
     args = [str(x) for x in args]
     if debug:
-        print "function:", function
-        print "args:", args
+        print("function:", function)
+        print("args:", args)
     return function(*args)
 
 

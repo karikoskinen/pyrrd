@@ -34,7 +34,7 @@ class Mapper(object):
         for name, value in self.getData().items():
             if value is None:
                 continue
-            print "%s = %s" % (name, unicode(value))
+            print("%s = %s" % (name, unicode(value)))
 
 
 class RowMapper(Mapper):
@@ -67,8 +67,8 @@ class CDPrepDSMapper(Mapper):
         for name, value in self.getData().items():
             if value is None:
                 continue
-            print "%s.cdp_prep[%s].%s = %s" % (
-                prefix, index, name, unicode(value))
+            print("%s.cdp_prep[%s].%s = %s" % (
+                prefix, index, name, unicode(value)))
 
 
 class CDPPrepMapper(Mapper, DSMixin):
@@ -117,7 +117,7 @@ class RRAMapper(Mapper, DSMixin):
         for name, value in self.getData().items():
             if value is None:
                 continue
-            print "%s.%s = %s" % (prefix, name, unicode(value))
+            print("%s.%s = %s" % (prefix, name, unicode(value)))
         for index, ds in enumerate(self.ds):
             ds.printInfo(prefix, index)
 
@@ -142,7 +142,7 @@ class DSMapper(Mapper):
             if value is None:
                 continue
             if name != self.name:
-                print "ds[%s].%s = %s" % (self.name, name, unicode(value))
+                print("ds[%s].%s = %s" % (self.name, name, unicode(value)))
 
 
 class RRDMapper(Mapper, DSMixin):

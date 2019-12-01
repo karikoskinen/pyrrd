@@ -92,8 +92,8 @@ class BindingsBackendTestCase(TestCase):
         rrd.info(useBindings=True, stream=output)
         for obtained, expected in zip(
             output.getvalue().split("\n"), expectedOutput):
-            print "obtained:", obtained
-            print "expected:", expected
+            print("obtained:", obtained)
+            print("expected:", expected)
             if obtained.startswith("filename"):
                 self.assertTrue(expected.strip().startswith("filename"))
             else:

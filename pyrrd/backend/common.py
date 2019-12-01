@@ -1,6 +1,6 @@
 import re
 
-from pyrrd.util import NaN
+from pyrrd.util import NaN, unicode
 
 
 def coerce(value):
@@ -26,7 +26,7 @@ def coerce(value):
             return None
         elif value == "nan":
             return NaN()
-    raise ValueError, "Unexpected type for data (%s)" % value
+    raise ValueError("Unexpected type for data (%s)" % value)
 
 
 def iterParse(lines):

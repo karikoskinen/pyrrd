@@ -9,6 +9,9 @@ except ImportError:
 
 XML = ElementTree.XML
 
+def unicode(s):
+    return s
+
 
 def epoch(dt_obj=None):
     '''
